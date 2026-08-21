@@ -1,11 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Akshit Sharma Portfolio</title>
   <meta charset="utf-8">
+  <title>Akshit Sharma | Full Stack Developer &amp; AI/Robotics Trainer</title>
+  <meta name="description" content="Portfolio of Akshit Sharma — full stack developer and AI/robotics technical trainer, working across web applications, embedded systems, IoT and hands-on technology education.">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Akshit Sharma | Full Stack Developer &amp; AI/Robotics Trainer">
+  <meta property="og:description" content="Full stack developer and AI/robotics technical trainer — web applications, embedded systems, IoT and hands-on technology education.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/me.png">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -23,6 +29,8 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- New rules only (skill tags, projects, research, highlights). Existing style.css is untouched. -->
+  <link rel="stylesheet" href="css/portfolio-updates.css">
 
   <style>
     /*======================================
@@ -42,18 +50,6 @@
       margin-left: 10px;
     }
 
-    .skill-mf .progress {
-      /* background-color: #cde1f8; */
-      margin: 0.5rem 0 1.2rem;
-      border-radius: 0;
-      height: 0.7rem;
-    }
-
-    .skill-mf .progress .progress-bar {
-      height: 0.7rem;
-      background-color: #ffbd39;
-    }
-
     /* Animation styles */
     #typing-animation {
       position: relative;
@@ -67,7 +63,6 @@
 
     #typing-animation:before {
       content: "";
-      /* position: absolute; */
       top: 0;
       left: 0;
       width: 0;
@@ -138,33 +133,23 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav nav ml-auto">
-          <li class="nav-item">
-            <a href="#home-section" class="nav-link">
-              <span>Home</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#about-section" class="nav-link">
-              <span>About</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#resume-section" class="nav-link">
-              <span>Resume</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact-section" class="nav-link">
-              <span>Contact</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#send-message" class="nav-link">
-              <span>Message me</span></a>
-          </li>
+          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#research-section" class="nav-link"><span>Research</span></a></li>
+          <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- HERO -->
   <section id="home-section" class="hero">
-    <div class="home-slider  owl-carousel">
-      <div class="slider-item ">
+    <div class="home-slider owl-carousel">
+      <div class="slider-item">
         <div class="overlay"></div>
         <div class="container">
           <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
@@ -172,7 +157,7 @@
             <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me.png);">
               <div class="overlay"></div>
             </div>
-            <div class="one-forth d-flex  align-items-center ftco-animate"
+            <div class="one-forth d-flex align-items-center ftco-animate"
               data-scrollax=" properties: { translateY: '70%' }">
               <div class="text">
                 <span class="subheading">Hello!</span>
@@ -180,42 +165,43 @@
                   <span>Akshit Sharma</span>
                 </h1>
 
-                <!-- Element to contain animated typing -->
                 <span id="typing-animation"></span>
 
                 <script>
-                  // Initialize the typing animation
                   const typingAnimationElement = document.getElementById('typing-animation');
+                  const typingTexts = ['Full Stack Developer     ', 'AI &amp; Robotics     ', 'Technical Trainer     '];
 
-                  // Create an array of typing text
-                  const typingTexts = ['Software Developer     ', 'Freelancer     ', 'Web Developer    '];
-
-                  // Create a function to display the typing animation for a given text
                   function playTypingAnimation(text) {
-                    // Loop through each character and add it to the element
                     for (let i = 0; i < text.length; i++) {
                       setTimeout(() => {
                         typingAnimationElement.textContent += text[i];
-                      }, i * 100); // Decreased delay to speed up the typing animation
+                      }, i * 100);
                     }
-
-                    // Once the animation is complete, reset the text and start over
                     setTimeout(() => {
                       typingAnimationElement.textContent = '';
                       playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                    }, text.length * 100); // Adjusted delay accordingly
+                    }, text.length * 100);
                   }
 
-                  // Start the typing animation loop
                   playTypingAnimation(typingTexts[0]);
                 </script><br><br>
-                <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-                <!-- <br> -->
+
+                <p class="hero-intro">
+                  I build full stack web applications and RESTful APIs, and I train students in robotics, AI,
+                  IoT and 3D printing — a Computer Science background that runs across both software and hardware.
+                </p>
+
                 <p>
-                  <a href="https://www.instagram.com/theakshitsharma_/" class="btn btn-primary py-3 px-4">My
-                    Instagram</a>
-                  <a href="https://www.linkedin.com/in/akshit-sharma-5180501b3/"
-                    class="btn btn-white btn-outline-white py-3 px-4">My Linkedin</a>
+                  <a href="#project-section" class="btn btn-primary py-3 px-4">View My Work</a>
+                  <a href="https://drive.google.com/file/d/1aDPc_3jueZCdG7skjzvA0xK2qmR1XNLQ/view" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">Download Resume</a>
+                  <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Contact Me</a>
+                </p>
+
+                <p class="hero-social">
+                  <a href="https://github.com/Akshit-Sh" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  &nbsp;·&nbsp;
+                  <a href="https://www.linkedin.com/in/akshit-sharma-5180501b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </p>
               </div>
             </div>
@@ -225,85 +211,28 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     <div class="container">
       <div class="row">
         <div class="row d-flex align-items-stretch">
-          <!-- <div class="row d-flex"> -->
           <div class="col-md-6 col-lg-5 d-flex">
             <div class="img-about img d-flex align-items-stretch">
               <div class="overlay">
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+                      <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Akshit Sharma">
                     </div>
                   </div>
-                  <!-- Details next to profile image -->
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
-                      <p>
-                        <span class="title-s">Name:
-                        </span>
-                        <span>Akshit Sharma</span>
-                      </p>
-                      <p>
-                        <span class="title-s">Job Role:
-                        </span>
-                        <span>Freelancer (Developer)</span>
-                      </p>
-                      <p>
-                        <!-- <span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> <p> -->
-                        <span class="title-s">Address:
-                        </span>
-                        <span>Kangra, Himachal Pradesh</span>
-                      </p>
+                      <p><span class="title-s">Name:</span> <span>Akshit Sharma</span></p>
+                      <p><span class="title-s">Role:</span> <span>Full Stack Developer &amp; AI/Robotics Trainer</span></p>
+                      <p><span class="title-s">Education:</span> <span>MCA — IGNOU, 2024–2026</span></p>
+                      <p><span class="title-s">Background:</span> <span>Computer Science</span></p>
+                      <p><span class="title-s">Location:</span> <span>Himachal Pradesh, India</span></p>
                     </div>
-                  </div>
-                </div>
-
-                <div class="skill-mf">
-                  <p class="title-s">Skills</p>
-                  <span>React JS</span>
-                  <!-- <span class="pull-right">85%</span> -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-
-                  <span>Wordpress</span>
-                  <!-- <span class="pull-right">95%</span> -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="95"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-
-                  <span>Web development</span>
-                  <!-- <span class="pull-right">85%</span> -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-
-                  <span>PHP</span>
-                  <!-- <span class="pull-right">99%</span> -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="90" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-
-                  <span>Javascript</span>
-                  <!-- <span class="pull-right">99%</span> -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-
-                  <span>C++</span>
-                  <!-- <span class="pull-right">99%</span> -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="80" aria-valuemin="0"
-                      aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
@@ -313,52 +242,39 @@
           <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
             <div class="row justify-content-start pb-3">
               <div class="col-md-12 heading-section ftco-animate">
-
                 <h1 class="big">About</h1>
                 <h2 class="mb-4">About Me</h2>
 
-                <p>Freelancer (Web Developer), React Developer, proficient in PHP, , and skilled in
-                  crafting visually appealing webpages using HTML, CSS, Tailwind, Bootstrap, and Material UI.
-                  Well-versed in Python, C++, C, and Java, with a solid foundation in SQL. Eager to contribute to
-                  innovative web development projects.</p>
-                <ul class="about-info mt-4 px-md-0 px-2">
-                  <li class="d-flex">
-                    <span>Profile:</span>
-                    <span>Website Developer &amp; Freelancer </span>
-                  </li>
-                  <li class="d-flex">
-                    <span>Domain:</span>
-                    <span>Software Developement</span>
-                  </li>
-                  <li class="d-flex">
-                    <span>Education:</span>
-                    <span>Bachelor of Science (with Honours) in Computer Science</span>
-                  </li>
-                  <li class="d-flex">
-                    <span>Language:</span>
-                    <span>English, Hindi</span>
-                  </li>
-                  <!-- <li class="d-flex"> <span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
-                  <li class="d-flex">
-                    <span>Other Skills:</span>
-                    <span>
-                      Automations, Observational skills, Creativity, Knowledge of Computers, Technical
-                      proficiency, Communication skills, Time management, Adaptability &amp; Attention to detail</span>
-                  </li>
-                  <li class="d-flex">
-                    <span>Interest:</span>
-                    <span>Traveling, Gaming, Teaching</span>
-                  </li>
+                <p>
+                  I'm a Computer Science graduate (B.Sc. Hons.) currently completing an MCA, with just over two
+                  years of hands-on experience across full stack development, technical support and teaching.
+                  On the software side that means building and maintaining web applications and RESTful APIs with
+                  Node.js, Express.js, React.js and MySQL/MongoDB — debugging live sites, fixing bugs and shipping
+                  features for real freelance clients.
+                </p>
+                <p>
+                  Alongside that, I train students in robotics, AI, IoT and 3D printing — working with Arduino,
+                  sensors, actuators and embedded systems, and helping learners go from an idea to a working
+                  prototype. A summer research internship at IIT Roorkee's Department of Electrical Engineering,
+                  building a Power Electronic Buck Converter with an Arduino controller, sits right at the
+                  intersection of both sides of what I do: software and hardware.
+                </p>
 
+                <ul class="about-info mt-4 px-md-0 px-2">
+                  <li class="d-flex"><span>Focus:</span> <span>Full stack development &amp; AI/robotics training</span></li>
+                  <li class="d-flex"><span>Domain:</span> <span>Software Development, IoT &amp; Technical Education</span></li>
+                  <li class="d-flex"><span>Education:</span> <span>MCA (in progress) &amp; B.Sc. (Hons.) Computer Science</span></li>
+                  <li class="d-flex"><span>Languages:</span> <span>English, Hindi</span></li>
+                  <li class="d-flex"><span>Other Skills:</span> <span>Automation, technical training, project mentoring, time management, adaptability, attention to detail</span></li>
+                  <li class="d-flex"><span>Interests:</span> <span>Traveling, gaming, teaching, content creation (YouTube: Akshit Productions)</span></li>
                 </ul>
               </div>
             </div>
 
             <div class="counter-wrap ftco-animate d-flex mt-md-3">
               <div class="text">
-                <!-- <p class="mb-4"> <span class="number" data-number="30">0</span> <span>+</span> <span>&nbsp; Projects completed</span> </p> -->
                 <p>
-                  <a href="https://www.linkedin.com/in/akshit-sharma-5180501b3/"
+                  <a href="https://www.linkedin.com/in/akshit-sharma-5180501b3/" target="_blank" rel="noopener noreferrer"
                     class="btn btn-primary py-3 px-3">LinkedIn</a>
                 </p>
               </div>
@@ -369,22 +285,80 @@
     </div>
   </section>
 
+  <!-- HIGHLIGHTS (replaces the old fake achievement/project counters) -->
+  <section class="ftco-section ftco-no-pt" id="highlights-section">
+    <div class="container">
+      <div class="row justify-content-center pb-4">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h2 class="mb-4">Highlights</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Full Stack Development</h3>
+              <h4>React, Node.js/Express, MySQL &amp; MongoDB</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Robotics &amp; AI Training</h3>
+              <h4>Arduino, sensors, embedded systems, drones, 3D printing</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Research Exposure</h3>
+              <h4>Summer internship at IIT Roorkee, EED — embedded hardware/software</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Student Mentoring</h3>
+              <h4>Project-based learning across multiple schools &amp; programs</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Application Support</h3>
+              <h4>Debugging, troubleshooting &amp; maintaining live client sites</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>2+ Years Experience</h3>
+              <h4>Across freelance, internship &amp; technical-support roles</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
   <section class="ftco-section ftco-no-pb" id="resume-section">
     <div class="container">
       <div class="row justify-content-center pb-5">
         <div class="col-md-10 heading-section text-center ftco-animate">
           <h1 class="big big-2">Resume</h1>
-          <h2 class="mb-4">Resume</h2>
-          <p>Freelancer,React developer, proficient in PHP and
-            skilled in jQuery
-            AJAX. Specialized in crafting visually appealing webpages using HTML, CSS, Tailwind, Bootstrap, and Material
-            UI. Possesses a strong foundation in Python, C++, C, and Java, with expertise in SQL. Eager to apply
-            expertise to drive innovative web development projects forward.</p>
+          <h2 class="mb-4">Experience</h2>
+          <p>Full stack development, technical support and teaching — plus hands-on robotics, AI and IoT training.</p>
         </div>
       </div>
 
       <div class="row">
-        <h1 class="big-4">Experience</h1>
+        <h1 class="big-4">Work Experience</h1>
         <div class="underline"></div>
       </div>
       <br>
@@ -392,198 +366,452 @@
       <div class="row">
         <div class="col-md-6">
           <div class="resume-wrap ftco-animate">
-            <span class="date">April 2025-Present</span>
-            <h2>Computer Science Teacher</h2>
-            <span class="position">Himlayan Public school </span>
-            <p class="mt-4">As a Computer Science teacher for classes +1 and +2, I help students build a strong foundation in programming, databases, and networking. I focus on both theory and practical learning, preparing them for exams as well as real-world applications. My aim is to make concepts clear, interactive, and useful for their future studies and careers.
-            <ul>
-              <li>Management of the site, time to time updates</li>
-              <li>Updating Hosting and domain services</li>
-              <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-            </ul>
-            </p>
+            <span class="date">Apr 2026 – Present</span>
+            <h2>STEM Trainer — Robotics, AI, Drones &amp; 3D Printing</h2>
+            <span class="position">KV Teachers (IIT Delhi – IHFC)</span>
+            <p class="mt-4">Teaching applied programming and hardware-software integration concepts, including
+              debugging student code and troubleshooting device issues.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="resume-wrap ftco-animate">
-            <span class="date">Sept 2024-Present</span>
-            <h2>Freelancer Website Administrator</h2>
+            <span class="date">Apr – May 2026</span>
+            <h2>Summer Research Intern</h2>
+            <span class="position">IIT Roorkee — Dept. of Electrical Engineering</span>
+            <p class="mt-4">Completed a summer training under Prof. Siba Kumar Patro, working on Arduino and
+              sensor-based systems. Developed a "Power Electronic Buck Converter using Arduino Controller,"
+              gaining practical experience in embedded hardware-software integration.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Nov 2025 – May 2026</span>
+            <h2>STEM Trainer — Robotics, AI, Drones &amp; 3D Printing</h2>
+            <span class="position">ATL — JNV (Cograd)</span>
+            <p class="mt-4">Delivered hands-on technical training; supported learners in debugging code and
+              resolving hardware/software issues.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Jun 2025 – Present</span>
+            <h2>Freelancer — Website Administrator</h2>
+            <span class="position">Coretek</span>
+            <p class="mt-4">Maintaining and enhancing a live business website: content updates, bug fixes, and
+              performance/functionality improvements per business requirements.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Apr – Sept 2025</span>
+            <h2>IP Teacher</h2>
+            <span class="position">Himalyan Public School, Nagrota HP</span>
+            <p class="mt-4">Taught Informatics Practices, including database fundamentals and web technologies,
+              to +1 and +2 students, combining theory with practical sessions.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Jan 2025 – Present</span>
+            <h2>Tech Support</h2>
+            <span class="position">Seznik Lifestyle Private Limited</span>
+            <p class="mt-4">Diagnosed and resolved application and technical issues; coordinated fixes with the
+              development team to keep systems running smoothly.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Sept 2024 – Present</span>
+            <h2>Freelancer — Website Administrator</h2>
             <span class="position">Holistic Homeopathy</span>
-            <p class="mt-4">As a website manager, I am responsible for updating and maintaining my client's site to
-              ensure optimal performance and user experience. I handle a variety of tasks, including content updates,
-              design improvements, and technical troubleshooting, to keep the site running smoothly and aligned with the
-              client's goals.
-            <ul>
-              <li>Management of the site, time to time updates</li>
-              <li>Updating Hosting and domain services</li>
-              <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-            </ul>
-            </p>
+            <p class="mt-4">Ongoing maintenance and enhancement of a client website — content management,
+              troubleshooting, and functionality updates.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="resume-wrap ftco-animate">
-            <span class="date">Jan-Aug 2024</span>
-            <h2>Associate Graphic Designer </h2>
-            <span class="position">Seznik</span>
-            <p class="mt-4">Seznik Lifestyle Private Limited, an Indian Brand, specializes in electronic gadgets which
-              somehow makes life or lifstyle easier. We are having portable printers, sealers etc.
-            <ul>
-              <li>Working in developement of Infographics, Instagram posts and meta ads</li>
-              <li>Building chat bots and some automations at the backend</li>
-              <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-            </ul>
-            </p>
+            <span class="date">Mar – Aug 2024</span>
+            <h2>Associate Graphic Designer</h2>
+            <span class="position">Seznik Lifestyle Private Limited</span>
+            <p class="mt-4">Supported web and digital asset design work — infographics, Instagram posts and meta
+              ads — collaborating with the tech team on site content, layout and simple chat/automation builds.</p>
           </div>
-
         </div>
         <div class="col-md-6">
           <div class="resume-wrap ftco-animate">
-            <span class="date">2022-Present</span>
-            <h2>Freelancer Website Administrator</h2>
+            <span class="date">Jan 2024 – Present</span>
+            <h2>Freelancer — Website Administrator</h2>
             <span class="position">RIICAS</span>
-            <p class="mt-4">Freelance Web developer specializing in paid Websites and services. Self-taught and
-              experienced in creating web pages.Event marketing on FB, Instagram.
-            <ul>
-              <li>Researching market trends to meet client demands.</li>
-              <li>Management of the site, hosting and servicing</li>
-              <li>Watsapp group admin of all the RIICAS groups</li>
-              <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-            </ul>
-            </p>
+            <p class="mt-4">Administering and maintaining the organization's website: updates, debugging and
+              enhancements as required, alongside event marketing support.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="resume-wrap ftco-animate">
-            <span class="date">Nov - Dec 2022</span>
-            <h2>Fellowship Internship </h2>
-            <span class="position">NWN (BJPs consulting Comapny)</span>
-            <p class="mt-4">Got an oppurtunity to work with Nation with Namoh (BJPs consulting Party) For MC Delhi
-              elections 2022.
-            <ul>
-              <li>Data collection and analysis.</li>
-              <li>Strategies for upcoming events</li>
-              <li>Designing InfoGraphics, templates and posters</li>
-              <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-            </ul>
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="col-md-6">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">Nov - Dec 2021</span>
-            <h2>React Js Developer</h2>
+            <span class="date">Nov 2021 – Dec 2021</span>
+            <h2>React.js Developer</h2>
             <span class="position">Adisrestha</span>
-            <p class="mt-4">Worked as an intern with Adisrestha (Startup).
-            <ul>
-              <li>Developing modules and web pages in React Js</li>
-              <li>Working and completing tasks with team members</li>
-
-            </ul>
-            </p>
+            <p class="mt-4">Built front-end features using React.js as part of a small team; certificate of
+              completion.</p>
           </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Nov – Dec 2022</span>
+            <h2>Internship</h2>
+            <span class="position">Nation With Namo (BJP's Consulting Company)</span>
+            <p class="mt-4">Data collection and analysis, event strategy support, and designing infographics,
+              templates and posters. Certificate of completion.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Aug 2020 – Jan 2022</span>
+            <h2>Part-Time Physics &amp; Chemistry Tutor</h2>
+            <span class="position">+1, +2 students</span>
+            <p class="mt-4">Taught core science concepts and problem-solving skills to senior secondary students.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Jul 2022</span>
+            <h2>TU-DU Collaborative Summer School</h2>
+            <span class="position">Certificate of completion</span>
+            <p class="mt-4">Completed a collaborative summer school program.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section class="ftco-section" id="skills-section">
+    <div class="container">
+      <div class="row justify-content-center pb-4">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Skills</h1>
+          <h2 class="mb-4">What I Work With</h2>
+          <p>No made-up percentages — just the languages, tools and hardware I actually use.</p>
         </div>
       </div>
 
-      <br>
-      <br>
+      <div class="row">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span>Java</span><span>C++</span><span>JavaScript</span><span>Python</span><span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Backend &amp; APIs</h3>
+              <div class="skill-tags">
+                <span>Node.js</span><span>Express.js</span><span>RESTful APIs</span><span>Application debugging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Frontend</h3>
+              <div class="skill-tags">
+                <span>React.js</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Databases</h3>
+              <div class="skill-tags">
+                <span>MySQL</span><span>MongoDB</span><span>Schema design</span><span>Query optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Tools &amp; Frameworks</h3>
+              <div class="skill-tags">
+                <span>Git</span><span>GitHub</span><span>Spring (academic)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="services-1 w-100">
+            <div class="desc">
+              <h3>Robotics, AI &amp; Hardware</h3>
+              <div class="skill-tags">
+                <span>Arduino</span><span>Sensors &amp; actuators</span><span>Microcontrollers</span>
+                <span>Embedded systems</span><span>Drones/UAVs</span><span>3D Printing</span>
+                <span>Tinkercad</span><span>PictoBlox</span><span>IoT</span><span>Electronics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="ftco-section" id="project-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Projects</h1>
+          <h2 class="mb-4">Projects</h2>
+          <p>Software projects, plus practical robotics/IoT prototypes built while training and learning hands-on.</p>
+        </div>
+      </div>
 
       <div class="row">
-        <h1 class="big-4">Education</h1>
+        <h1 class="big-4">Software Projects</h1>
         <div class="underline"></div>
       </div>
       <br>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2024-2026</span>
-            <h2>Masters in Computer Applications</h2>
-            <span class="position">IGNOU, New Delhi</span>
-            <p class="mt-4">Grade: --</p>
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Full Stack Responsive Web Page</h3>
+              <p>A complete responsive web application with HTML, CSS and JavaScript on the front end and MongoDB
+                (via Mongoose) as the data layer — end-to-end frontend-to-database development.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2020-2023</span>
-            <h2>Bachelor of Science (with Honours) in Computer Science</h2>
-            <span class="position">ARSD, University Of Delhi</span>
-            <p class="mt-4">Grade: First class distinction.</p>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">NEWSMAN — News Application</h3>
+              <p>A React.js application that consumes a third-party news API to display live news.</p>
+            </div>
           </div>
         </div>
-
-        <div class="col-md-6">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2019-2020</span>
-            <h2>Higher Secondary School</h2>
-            <span class="position">HPBOSE (PCM)</span>
-            <p class="mt-4">Grade: First class distinction.</p>
-            <p class="mt-4">Percentage: 93.6%</p>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">TextUtils</h3>
+              <p>A React app for everyday text utilities — case conversion and one-click copy — built and hosted.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">YouTube Front-End Clone</h3>
+              <p>A front-end clone of the YouTube interface, built with HTML and CSS.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Snake Game</h3>
+              <p>A playable browser game built with HTML, CSS and JavaScript.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-6 text-center ftco-animate">
+      <br><br>
+
+      <div class="row">
+        <h1 class="big-4">Robotics &amp; IoT Prototypes</h1>
+        <div class="underline"></div>
+        <p class="mt-3">Practical prototypes built for and alongside robotics/AI training sessions — not commercial products.</p>
+      </div>
+      <br>
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Smart Gate</h3>
+              <p>RFID + servo motor based access control prototype.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Smart Traffic Light</h3>
+              <p>Arduino-based traffic management prototype.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Laser Security System</h3>
+              <p>LDR-based security/intrusion detection prototype.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Distance Measurement System</h3>
+              <p>Ultrasonic sensor-based distance measurement setup.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Touchless Water Dispenser</h3>
+              <p>Sensor-based contactless dispensing prototype.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">Smart Thermostat</h3>
+              <p>Temperature-based automated control prototype.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12 ftco-animate">
+          <p class="mb-2"><strong>Also explored, hands-on:</strong></p>
+          <div class="skill-tags">
+            <span>Blind Spot Detection</span><span>Smart Curtain Opener</span><span>Pollution Monitoring System</span>
+            <span>Automatic Fish Tank Feeder</span><span>Rain Detection System</span><span>Color Recognition</span>
+            <span>General IoT/Arduino experiments</span><span>3D Printing projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL TRAINING & MENTORING -->
+  <section class="ftco-section ftco-no-pt" id="training-section">
+    <div class="container">
+      <div class="row justify-content-center pb-4">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h2 class="mb-4">Technical Training &amp; Mentoring</h2>
           <p>
-            <a href="https://drive.google.com/file/d/1Bl-vTnD1T4sJ74nOo-LTiEqh6fqdtLmA/view?usp=sharing">Download CV</a>
+            I work with students on practical technology projects — robotics, AI, IoT, coding, Arduino, electronics,
+            drones and 3D printing — through hands-on learning, experimentation and prototyping rather than slides
+            alone. A lot of the day-to-day work is helping a student debug their own code or troubleshoot a circuit
+            that isn't behaving, so they build the habit of problem-solving, not just following instructions.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <section class="ftco-section" id="project-section"> <div class="container"> <div class="row justify-content-center mb-5 pb-5"> <div class="col-md-7 heading-section text-center ftco-animate"> <h1 class="big big-2">Projects</h1> <h2 class="mb-4">Projects</h2> <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p> </div> </div> <div class="row d-flex"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a> </h3> <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a> </h3> <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a> </h3> <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> </div> </div> </div> </div> <br> <div class="row d-flex justify-content-center"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a> </h3> <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a> </h3> <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> </div> </div> </div> </div> </div> </section> -->
-
-  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-    <div class="hid" style="visibility:hidden">
-      <div class="container">
-        <div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
+  <!-- RESEARCH INTERESTS -->
+  <section class="ftco-section ftco-no-pt ftco-no-pb" id="research-section">
+    <div class="container">
+      <div class="row justify-content-center pb-4">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Research</h1>
+          <h2 class="mb-4">Research Interests</h2>
+          <p>
+            These are areas I'm interested in exploring further, informed by a summer research internship at
+            IIT Roorkee's Department of Electrical Engineering (embedded hardware/software, under Prof. Siba
+            Kumar Patro) — not completed publications or research achievements.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center ftco-animate">
+          <div class="skill-tags skill-tags-center">
+            <span>Robotics</span><span>Robot Learning</span><span>Artificial Intelligence</span>
+            <span>Machine Learning</span><span>Safe AI</span><span>Control Systems</span>
+            <span>Autonomous Systems</span><span>Intelligent Robotics</span>
+            <span>Reinforcement Learning</span><span>Human-Robot Interaction</span>
           </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="15">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="1000">0</strong> <span>Mentored Students</span> </div> </div> </div> <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="500">0</strong> <span>Cups of coffee</span> </div> </div> </div> -->
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- EDUCATION -->
+  <section class="ftco-section" id="education-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Education</h1>
+          <h2 class="mb-4">Education</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024 – 2026</span>
+            <h2>Master's in Computer Applications</h2>
+            <span class="position">Indira Gandhi National Open University (IGNOU), New Delhi</span>
+            <p class="mt-4">Currently completing.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2020 – 2023</span>
+            <h2>B.Sc. (Hons.) Computer Science</h2>
+            <span class="position">Atma Ram Sanatan Dharma College, University of Delhi</span>
+            <p class="mt-4">CGPA 8.176 — First Class Distinction.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2019 – 2020</span>
+            <h2>+2 Non-Medical (Maths)</h2>
+            <span class="position">GMSSS Rajpur, Palampur (HP) — HPBOSE</span>
+            <p class="mt-4">93.6%</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Class 10</span>
+            <h2>Secondary Education</h2>
+            <span class="position">Jawahar Navodaya Vidyalaya, Kangra (HP)</span>
+            <p class="mt-4">87%</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 text-center ftco-animate">
+          <p>
+            <a href="https://drive.google.com/file/d/1aDPc_3jueZCdG7skjzvA0xK2qmR1XNLQ/view" target="_blank" rel="noopener noreferrer">Download Resume</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB CTA -->
+  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
     <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-      <!-- <div class="container"> -->
       <div class="row justify-content-center">
         <div class="col-md-7 ftco-animate text-center">
           <h2>Here's my<span>
-              <button id="gitbtn" class="btn btn-primary py-3 px-5" onclick="gitClick()">GitHub</button>
+              <a href="https://github.com/Akshit-Sh" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">GitHub</a>
             </span>
           </h2>
           <div class="heading">
-            <h4>
-              I love to code &amp; create awesome artworks.
-            </h4>
+            <h4>Explore my projects and experiments</h4>
             <br>
           </div>
         </div>
       </div>
-      <!-- </div> -->
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-3">
@@ -610,9 +838,7 @@
               <span class="icon-phone2"></span>
             </div>
             <h3 class="mb-4">Contact Number</h3>
-            <p>
-              <a href="tel://7470695586">+91 7018279498</a>
-            </p>
+            <p><a href="tel:+917018279498">+91 7018279498</a></p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -621,9 +847,7 @@
               <span class="icon-paper-plane"></span>
             </div>
             <h3 class="mb-4">Email Address</h3>
-            <p>
-              <a href="mailto:devnathanurag7.com">akshitsharma20022@gmail.com</a>
-            </p>
+            <p><a href="mailto:akshitsharma20022@gmail.com">akshitsharma20022@gmail.com</a></p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -631,69 +855,53 @@
             <div class="icon d-flex align-items-center justify-content-center">
               <span class="icon-globe"></span>
             </div>
-            <h3 class="mb-4">Download Resume</h3>
-            <p>
-              <a href="https://drive.google.com/file/d/1aDPc_3jueZCdG7skjzvA0xK2qmR1XNLQ/view">resumelink</a>
-            </p>
+            <h3 class="mb-4">Resume</h3>
+            <p><a href="https://drive.google.com/file/d/1aDPc_3jueZCdG7skjzvA0xK2qmR1XNLQ/view" target="_blank" rel="noopener noreferrer">Download Resume</a></p>
           </div>
         </div>
 
         <div class="container">
-          <br>
-          <br>
+          <br><br>
           <div class="row justify-content-center">
             <div class="col-md-7 ftco-animate text-center">
-              <h2>Have a<span>
-                  Question?
-                </span>
-              </h2>
+              <h2>Have a<span> Question?</span></h2>
               <div class="que" id="send-message">
                 <form action="https://api.web3forms.com/submit" method="POST">
                   <input type="hidden" name="access_key" value="247165a5-d817-49c7-8719-de90dca3240b">
                   <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                     <div class="col-12">
-                      <label for="fullname" class="form-label">Full Name
-                        <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="fullname" name="fullname" value=""
-                        required="required">
+                      <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="fullname" name="fullname" required="required">
                     </div>
                     <div class="col-12 col-md-6">
-                      <label for="email" class="form-label">Email
-                        <span class="text-danger">*</span></label>
+                      <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
                       <div class="input-group">
                         <span class="input-group-text">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-envelope" viewbox="0 0 16 16">
-                            <path
-                              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                           </svg>
                         </span>
-                        <input type="email" class="form-control" id="email" name="email" value="" required="required">
+                        <input type="email" class="form-control" id="email" name="email" required="required">
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <label for="phone" class="form-label">Phone Number</label>
                       <div class="input-group">
                         <span class="input-group-text">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-telephone" viewbox="0 0 16 16">
-                            <path
-                              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                           </svg>
                         </span>
-                        <input type="tel" class="form-control" id="phone" name="phone" value="">
+                        <input type="tel" class="form-control" id="phone" name="phone">
                       </div>
                     </div><br>
                     <div class="col-12">
-                      <label for="subject" class="form-label">Subject
-                        <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
+                      <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="subject" name="subject" required="required">
                     </div>
                     <div class="col-12">
-                      <label for="message" class="form-label">Message
-                        <span class="text-danger">*</span></label>
-                      <textarea class="form-control" id="message" name="message" rows="3"
-                        required="required"></textarea>
+                      <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                      <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
                     </div>
                     <div class="col-12">
                       <div class="d-grid"><br>
@@ -707,20 +915,21 @@
           </div>
           <br>
           <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-            <li class="ftco-animate normal-txt">Find me on
-            </li>
-            <!-- <li class="ftco-animate"> <a href="https://www.youtube.com/@RishabhMishraOfficial"> <span class="icon-youtube"></span></a> </li> -->
+            <li class="ftco-animate normal-txt">Find me on</li>
             <li class="ftco-animate">
-              <a href="https://www.linkedin.com/in/akshit-sharma-5180501b3/">
+              <a href="https://www.linkedin.com/in/akshit-sharma-5180501b3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <span class="icon-linkedin"></span></a>
             </li>
             <li class="ftco-animate">
-              <a href="https://x.com/sharma_akshit_">
+              <a href="https://github.com/Akshit-Sh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <span class="icon-github"></span></a>
+            </li>
+            <li class="ftco-animate">
+              <a href="https://x.com/sharma_akshit_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
                 <span class="icon-twitter"></span></a>
             </li>
-            <!-- <li class="ftco-animate"> <a href="https://twitter.com/rishabhnmishra"> <span class="icon-facebook"></span></a> </li> -->
             <li class="ftco-animate">
-              <a href="https://www.instagram.com/theakshitsharma_/">
+              <a href="https://www.instagram.com/theakshitsharma_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <span class="icon-instagram"></span></a>
             </li>
           </ul>
@@ -733,18 +942,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-
           <p style="display: none;">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
+            <script>document.write(new Date().getFullYear());</script>
             All rights reserved | This template is made with
             <i class="icon-heart color-danger" aria-hidden="true"></i>
             by
             <a href="https://colorlib.com" target="_blank">Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
         </div>
       </div>
@@ -755,8 +959,7 @@
   <div id="ftco-loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
     </svg>
   </div>
 
@@ -774,15 +977,7 @@
   <script src="js/scrollax.min.js"></script>
 
   <script src="js/main.js"></script>
-  <script>
-    function gitClick() {
-      window.location.href = 'https://github.com/Akshit-Sh';
-    }
-  </script>
 
 </body>
 
 </html>
-<div>
-  
-</div>

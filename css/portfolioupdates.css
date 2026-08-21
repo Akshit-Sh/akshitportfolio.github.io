@@ -1,0 +1,71 @@
+/* ==========================================================
+   Portfolio content-update additions
+   Loaded AFTER css/style.css — only new rules, nothing here
+   overrides or duplicates the existing stylesheet.
+   ========================================================== */
+
+/* Hero intro paragraph + social links (replaces removed tagline paragraph) */
+.hero-intro {
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-social {
+  margin-top: 1rem;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-social a {
+  color: #ffbd39;
+}
+
+/* Skill / research tag pills — replaces the old percentage progress bars */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.skill-tags-center {
+  justify-content: center;
+}
+
+.skill-tags span {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 189, 57, 0.35);
+  border-radius: 30px;
+}
+
+/* Project cards: the blog-entry component normally pairs with a block-20
+   background image; these project entries have no real screenshots, so
+   we give the text block a light card treatment instead of leaving it bare. */
+#project-section .blog-entry .text {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  padding: 1.75em;
+  height: 100%;
+}
+
+#project-section .blog-entry {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Services-1 cards used for Highlights and Skills categories need equal
+   height when several sit in the same row */
+#highlights-section .services-1,
+#skills-section .services-1 {
+  height: 100%;
+}
