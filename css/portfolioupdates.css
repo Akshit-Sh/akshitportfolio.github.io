@@ -7,7 +7,7 @@
 /* Hero intro paragraph + social links (replaces removed tagline paragraph) */
 .hero-intro {
   max-width: 480px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8) !important;
   font-size: 17px;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -52,6 +52,42 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffbd39;
+}
+
+/* Hero photo: a real <img> instead of a CSS background-image, so it can
+   never fall back to a zoomed/cropped "cover" look if this stylesheet
+   fails to load. It's simply centered and scaled to fit within its
+   column, anchored to the bottom like a standing portrait. */
+.hero-photo-wrap {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+  .hero-photo-wrap {
+    transform: translateX(20%);
+  }
+}
+
+.hero-photo-img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 88%;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media (max-width: 991.98px) {
+  .hero-photo-img {
+    max-width: 70%;
+    max-height: 60%;
+  }
 }
 
 /* Skill / research tag pills — replaces the old percentage progress bars */
