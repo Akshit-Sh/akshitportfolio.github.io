@@ -24,6 +24,36 @@
   color: #ffbd39;
 }
 
+/* Hero CTA row: buttons wrap on smaller screens, so they need their own
+   row/column gap instead of relying on inline whitespace between anchors */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 0;
+}
+
+/* The template's .services-1 h3:after draws a short underline 15px below
+   the card's small eyebrow title. In the Highlights/Skills cards the body
+   text (h4 / .skill-tags) sits right underneath, so that line visually
+   overlaps the first line of text. Removing it here only — it's still
+   fine wherever the template used it originally. */
+#highlights-section .services-1 .desc h3:after,
+#skills-section .services-1 .desc h3:after {
+  content: none;
+}
+
+/* Status label on the MCA/research robotics-AI project cards */
+.project-status {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffbd39;
+}
+
 /* Skill / research tag pills — replaces the old percentage progress bars */
 .skill-tags {
   display: flex;
